@@ -4,36 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LuxNicker Blog</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: #1a1a1a;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .ln-redirect {
-            padding: 16px 22px;
-            border-radius: 12px;
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            text-align: center;
-        }
-    </style>
-    <meta http-equiv="refresh" content="0; url=index.html#blog">
+    <meta name="description" content="LuxNicker blog yazılarını keşfedin: yazı stilleri, semboller, emojiler ve dijital profil trendleri.">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="ln-redirect">
-        Blog sayfasına yönlendiriliyor...
-    </div>
+    <div class="ln-container">
+        <header class="ln-header">
+            <div class="ln-header-content">
+                <div class="ln-brand">
+                    <img src="assets/images/luxnickerlogo.png" alt="luxNicker Logo" class="ln-logo">
+                    <h1 class="ln-logo-text">LUX NİCKER</h1>
+                </div>
+                <nav class="ln-nav">
+                    <a href="index.html" class="ln-nav-btn" title="Ana Sayfaya Dön">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="ln-nav-icon">
+                            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                        </svg>
+                        <span>Ana Sayfa</span>
+                    </a>
+                </nav>
+            </div>
+        </header>
 
-    <script>
-        // Dosya adı standardizasyonu için: gerçek liste `index.html#blog` içinde.
-        window.location.replace('index.html#blog');
-    </script>
+        <main class="ln-main">
+            <section class="ln-tab-content ln-active">
+                <div class="ln-tab-header">
+                    <h2 class="ln-tab-title">LuxNicker Blog</h2>
+                    <p class="ln-tab-desc">Yazı stilleri, semboller, emojiler ve profil trendleri hakkında en güncel içerikler.</p>
+                </div>
+                <div class="ln-blog-container">
+                    <div class="ln-blog-grid">
+                        <article class="ln-blog-card">
+                            <div class="ln-blog-image">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='250' viewBox='0 0 400 250'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23a035ff;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%236a1b9a;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='250' fill='url(%23grad1)' /%3E%3Ctext x='200' y='125' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dominant-baseline='middle'%3E📝 Trendler%3C/text%3E%3C/svg%3E" alt="Blog Görseli">
+                            </div>
+                            <div class="ln-blog-content">
+                                <div class="ln-blog-meta">
+                                    <span class="ln-blog-date">15 Mart 2026</span>
+                                    <span class="ln-blog-category">Trendler</span>
+                                </div>
+                                <h3 class="ln-blog-title">2026'da En Popüler Şekilli Nick Stilleri</h3>
+                                <p class="ln-blog-excerpt">Instagram ve Discord profillerinde bu yıl en çok tercih edilen yazı stilleri ve kullanım ipuçları...</p>
+                                <a href="blog-yazisi-3.html" class="ln-blog-read-more">Devamını Oku →</a>
+                            </div>
+                        </article>
+                        <article class="ln-blog-card">
+                            <div class="ln-blog-image">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='250' viewBox='0 0 400 250'%3E%3Cdefs%3E%3ClinearGradient id='grad2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23cb20ff;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%238217ff;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='250' fill='url(%23grad2)' /%3E%3Ctext x='200' y='125' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dominant-baseline='middle'%3E💡 İpuçları%3C/text%3E%3C/svg%3E" alt="Blog Görseli">
+                            </div>
+                            <div class="ln-blog-content">
+                                <div class="ln-blog-meta">
+                                    <span class="ln-blog-date">12 Mart 2026</span>
+                                    <span class="ln-blog-category">İpuçları</span>
+                                </div>
+                                <h3 class="ln-blog-title">Sembollerle Profilinizi Özelleştirin</h3>
+                                <p class="ln-blog-excerpt">Nadir semboller ve özel karakterlerle sosyal medya hesabınızı nasıl benzersiz hale getirebilirsiniz...</p>
+                                <a href="blog-yazisi-2.html" class="ln-blog-read-more">Devamını Oku →</a>
+                            </div>
+                        </article>
+                        <article class="ln-blog-card">
+                            <div class="ln-blog-image">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='250' viewBox='0 0 400 250'%3E%3Cdefs%3E%3ClinearGradient id='grad3' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23b045ff;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%237a2baa;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='250' fill='url(%23grad3)' /%3E%3Ctext x='200' y='125' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dominant-baseline='middle'%3E📚 Rehber%3C/text%3E%3C/svg%3E" alt="Blog Görseli">
+                            </div>
+                            <div class="ln-blog-content">
+                                <div class="ln-blog-meta">
+                                    <span class="ln-blog-date">8 Mart 2026</span>
+                                    <span class="ln-blog-category">Rehber</span>
+                                </div>
+                                <h3 class="ln-blog-title">Emoji Kullanımının Psikolojisi</h3>
+                                <p class="ln-blog-excerpt">Emojilerin iletişim üzerindeki etkisi ve doğru kullanım stratejileri hakkında bilmeniz gerekenler...</p>
+                                <a href="blog-yazisi-1.html" class="ln-blog-read-more">Devamını Oku →</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 </html>

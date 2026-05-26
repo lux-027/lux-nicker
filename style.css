@@ -1073,6 +1073,24 @@ body:not(.ln-info-page) .ln-tab-btn.ln-active[data-tab="home"] .ln-tab-text {
     }
 }
 
+#styles #stylesGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+#stylesGrid .ln-card {
+    padding: 16px;
+}
+
+#stylesGrid .ln-card-result {
+    font-size: 20px;
+}
+
+#styles #stylesGrid .ln-card {
+    min-height: 180px;
+}
+
 /* ===== CATEGORIES ===== */
 .ln-categories {
     display: flex;

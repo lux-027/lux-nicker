@@ -1,0 +1,24 @@
+{
+  "name": "luxnicker",
+  "version": "1.0.0",
+  "description": "Premium Şekilli Nick, Sembol ve Emoji Aracı",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "nick",
+    "emoji",
+    "symbol",
+    "text-style",
+    "unicode",
+    "generator"
+  ],
+  "author": "luxNicker",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.1.4"
+  }
+}

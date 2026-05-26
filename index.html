@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>luxNicker - Premium Şekilli Nick, Sembol ve Emoji Aracı</title>
+    <meta name="description" content="Lüks ve modern şekilli nick, sembol ve emoji oluşturma aracı">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="ln-container">
+        <!-- Üst Bar -->
+        <header class="ln-header">
+            <div class="ln-header-content">
+                <div class="ln-brand">
+                    <img src="assets/images/luxnickerlogo.png" alt="luxNicker Logo" class="ln-logo">
+                    <h1 class="ln-logo-text">LUX NİCKER</h1>
+                </div>
+                <nav class="ln-tabs">
+                    <button class="ln-tab-btn" data-tab="home">
+                        <span class="ln-tab-icon">🏠</span>
+                        <span class="ln-tab-text">Ana Sayfa</span>
+                    </button>
+                    <button class="ln-tab-btn" data-tab="styles">
+                        <span class="ln-tab-icon">✏️</span>
+                        <span class="ln-tab-text">Yazı Stilleri</span>
+                    </button>
+                    <button class="ln-tab-btn" data-tab="symbols">
+                        <span class="ln-tab-icon">⚡</span>
+                        <span class="ln-tab-text">Semboller</span>
+                    </button>
+                    <button class="ln-tab-btn" data-tab="emojis">
+                        <span class="ln-tab-icon">✨</span>
+                        <span class="ln-tab-text">Emojiler</span>
+                    </button>
+                    <button class="ln-tab-btn" data-tab="blog">
+                        <span class="ln-tab-icon">📝</span>
+                        <span class="ln-tab-text">Blog</span>
+                    </button>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Ana İçerik -->
+        <main class="ln-main">
+            <!-- Ana Sayfa -->
+            <section id="home" class="ln-tab-content ln-active">
+                <div class="ln-hero-section">
+                    <h2 class="ln-hero-title">Premium Şekilli Nick Aracı</h2>
+                    <p class="ln-hero-subtitle">Lüks ve modern tasarımla şekilli nick, sembol ve emoji dünyasına adım atın</p>
+                </div>
+
+                <!-- Araçlarımızı Keşfedin -->
+                <div class="ln-explore-section">
+                    <h3 class="ln-section-title">Araçlarımızı Keşfedin</h3>
+                    <div class="ln-explore-grid">
+                        <button class="ln-explore-btn" data-tab="styles">
+                            <span class="ln-explore-icon">✏️</span>
+                            <span class="ln-explore-text">Yazı Stilleri</span>
+                        </button>
+                        <button class="ln-explore-btn" data-tab="symbols">
+                            <span class="ln-explore-icon">🌌</span>
+                            <span class="ln-explore-text">Semboller</span>
+                        </button>
+                        <button class="ln-explore-btn" data-tab="emojis">
+                            <span class="ln-explore-icon">😊</span>
+                            <span class="ln-explore-text">Emojiler</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Hizmetlerimiz Kartları -->
+                <div class="ln-services-section">
+                    <h3 class="ln-section-title">Hizmetlerimiz</h3>
+                    <div class="ln-services-grid">
+                        <div class="ln-service-card">
+                            <div class="ln-service-icon">⚡</div>
+                            <div class="ln-service-content">
+                                <h4 class="ln-service-title">Hızlı & Pratik</h4>
+                                <p class="ln-service-desc">Saniyeler içinde şekilli nick oluştur, tek tıkla kopyala.</p>
+                            </div>
+                        </div>
+                        <div class="ln-service-card">
+                            <div class="ln-service-icon">🎯</div>
+                            <div class="ln-service-content">
+                                <h4 class="ln-service-title">Tek Tıkla Kopyala</h4>
+                                <p class="ln-service-desc">Nickini yaz, beğendiğin stile dokun ve saniyesinde panoya kopyala.</p>
+                            </div>
+                        </div>
+                        <div class="ln-service-card">
+                            <div class="ln-service-icon">⭐</div>
+                            <div class="ln-service-content">
+                                <h4 class="ln-service-title">Devasa Arşiv</h4>
+                                <p class="ln-service-desc">100'lerce şekilli yazı, özel sembol ve kategorize edilmiş emoji.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tab 1: Yazı Stilleri -->
+            <section id="styles" class="ln-tab-content">
+                <div class="ln-tab-header">
+                    <h2 class="ln-tab-title">Şekilli Nick Oluşturucu</h2>
+                    <p class="ln-tab-desc">İsminizi yazın, onlarca farklı premium stilden dilediğinizi tek tıkla panoya kopyalayın.</p>
+                </div>
+                <div class="ln-input-section">
+                    <div class="ln-input-wrapper">
+                        <div class="ln-input-icon">✏️</div>
+                        <input type="text" id="nameInput" class="ln-input" placeholder="Nickinizi buraya yazın..." maxlength="30">
+                    </div>
+                </div>
+                <div id="stylesGrid" class="ln-grid">
+                    <!-- JavaScript ile dinamik doldurulacak -->
+                </div>
+            </section>
+
+            <!-- Tab 2: Semboller -->
+            <section id="symbols" class="ln-tab-content">
+                <div class="ln-tab-header">
+                    <h2 class="ln-tab-title">Özel Semboller Arşivi</h2>
+                    <p class="ln-tab-desc">Instagram, Discord ve oyun profillerinizi süslemek için özenle seçilmiş, nadir ve estetik semboller.</p>
+                </div>
+                <div id="symbolsContainer" class="ln-categories">
+                    <!-- JavaScript ile dinamik doldurulacak -->
+                </div>
+            </section>
+
+            <!-- Tab 3: Emojiler -->
+            <section id="emojis" class="ln-tab-content">
+                <div class="ln-tab-header">
+                    <h2 class="ln-tab-title">Kategorize Emojiler</h2>
+                    <p class="ln-tab-desc">Mesajlarınızı ve biyografilerinizi renklendirecek en popüler emojiler tek tık uzağınızda.</p>
+                </div>
+                <div id="emojisContainer" class="ln-categories">
+                    <!-- JavaScript ile dinamik doldurulacak -->
+                </div>
+            </section>
+
+            <!-- Tab 4: Blog -->
+            <section id="blog" class="ln-tab-content">
+                <div class="ln-tab-header">
+                    <h2 class="ln-tab-title">LuxNicker Blog</h2>
+                    <p class="ln-tab-desc">Şekilli nick kullanımı, trendler ve ipuçları hakkında en güncel yazılar.</p>
+                </div>
+                <div class="ln-blog-container">
+                    <div class="ln-blog-grid">
+                        <article class="ln-blog-card">
+                            <div class="ln-blog-image">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='250' viewBox='0 0 400 250'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23a035ff;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%236a1b9a;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='250' fill='url(%23grad1)' /%3E%3Ctext x='200' y='125' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dominant-baseline='middle'%3E📝 Trendler%3C/text%3E%3C/svg%3E" alt="Blog Görseli">
+                            </div>
+                            <div class="ln-blog-content">
+                                <div class="ln-blog-meta">
+                                    <span class="ln-blog-date">15 Mart 2026</span>
+                                    <span class="ln-blog-category">Trendler</span>
+                                </div>
+                                <h3 class="ln-blog-title">2026'da En Popüler Şekilli Nick Stilleri</h3>
+                                <p class="ln-blog-excerpt">Instagram ve Discord profillerinde bu yıl en çok tercih edilen yazı stilleri ve kullanım ipuçları...</p>
+                                <a href="#" class="ln-blog-read-more" onclick="handleBlogReadMore(event, '2026-populer-nick-stilleri')">Devamını Oku →</a>
+                            </div>
+                        </article>
+                        
+                        <article class="ln-blog-card">
+                            <div class="ln-blog-image">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='250' viewBox='0 0 400 250'%3E%3Cdefs%3E%3ClinearGradient id='grad2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23cb20ff;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%238217ff;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='250' fill='url(%23grad2)' /%3E%3Ctext x='200' y='125' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dominant-baseline='middle'%3E💡 İpuçları%3C/text%3E%3C/svg%3E" alt="Blog Görseli">
+                            </div>
+                            <div class="ln-blog-content">
+                                <div class="ln-blog-meta">
+                                    <span class="ln-blog-date">12 Mart 2026</span>
+                                    <span class="ln-blog-category">İpuçları</span>
+                                </div>
+                                <h3 class="ln-blog-title">Sembollerle Profilinizi Özelleştirin</h3>
+                                <p class="ln-blog-excerpt">Nadir semboller ve özel karakterlerle sosyal medya hesabınızı nasıl benzersiz hale getirebilirsiniz...</p>
+                                <a href="#" class="ln-blog-read-more" onclick="handleBlogReadMore(event, 'sembollerle-profili-ozellestir')">Devamını Oku →</a>
+                            </div>
+                        </article>
+                        
+                        <article class="ln-blog-card">
+                            <div class="ln-blog-image">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='250' viewBox='0 0 400 250'%3E%3Cdefs%3E%3ClinearGradient id='grad3' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23b045ff;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%237a2baa;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='250' fill='url(%23grad3)' /%3E%3Ctext x='200' y='125' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dominant-baseline='middle'%3E📚 Rehber%3C/text%3E%3C/svg%3E" alt="Blog Görseli">
+                            </div>
+                            <div class="ln-blog-content">
+                                <div class="ln-blog-meta">
+                                    <span class="ln-blog-date">8 Mart 2026</span>
+                                    <span class="ln-blog-category">Rehber</span>
+                                </div>
+                                <h3 class="ln-blog-title">Emoji Kullanımının Psikolojisi</h3>
+                                <p class="ln-blog-excerpt">Emojilerin iletişim üzerindeki etkisi ve doğru kullanım stratejileri hakkında bilmeniz gerekenler...</p>
+                                <a href="#" class="ln-blog-read-more" onclick="handleBlogReadMore(event, 'emoji-kullanim-psikolojisi')">Devamını Oku →</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Bildirim Alanı -->
+        <div id="toast" class="ln-toast">
+            <span class="ln-toast-text">Kopyalandı! ✅</span>
+        </div>
+        
+        <!-- Alt Bar -->
+        <footer class="ln-footer">
+            <div class="ln-footer-container">
+                <!-- Sol Bölüm: Logo ve İstatistik -->
+                <div class="ln-footer-section ln-footer-left">
+                    <div class="ln-footer-brand">
+                        <div class="ln-footer-logo">
+                            <img src="assets/images/luxnickerlogo.png" alt="LuxNicker Logo">
+                        </div>
+                        <h2 class="ln-footer-logo-text">LUX NİCKER</h2>
+                    </div>
+                    <p class="ln-footer-description">
+                        Sosyal medya profilleriniz için premium şekilli yazı ve sembol servisi.
+                    </p>
+                    <div class="ln-footer-stats">
+                        <div class="ln-stats-box">
+                            <div class="ln-stats-icon">↑</div>
+                            <div class="ln-stats-content">
+                                <div class="ln-stats-title">Toplam Nick Kullanımı</div>
+                                <div class="ln-stats-number" id="usage-counter">2843</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Orta Bölüm: Hızlı Linkler -->
+                <div class="ln-footer-section ln-footer-middle">
+                    <h4 class="ln-footer-heading">Hızlı Linkler</h4>
+                    <nav class="ln-footer-nav">
+                        <a href="#" class="ln-footer-link" data-tab="styles">Yazı Stilleri</a>
+                        <a href="#" class="ln-footer-link" data-tab="symbols">Semboller</a>
+                        <a href="#" class="ln-footer-link" data-tab="emojis">Emojiler</a>
+                        <a href="#" class="ln-footer-link" data-tab="blog">Blog</a>
+                    </nav>
+                </div>
+                
+                <!-- Sağ Bölüm: Yasal -->
+                <div class="ln-footer-section ln-footer-right">
+                    <h4 class="ln-footer-heading">Yasal</h4>
+                    <nav class="ln-footer-nav">
+                        <a href="gizlilik.html" class="ln-footer-link">Gizlilik Politikası</a>
+                        <a href="hakkimizda.html" class="ln-footer-link">Hakkımızda</a>
+                        <a href="kullanim-sartlari.html" class="ln-footer-link">Kullanım Şartları</a>
+                    </nav>
+                </div>
+            </div>
+            
+            <!-- En Alt Bant -->
+            <div class="ln-footer-bottom">
+                <div class="ln-footer-bottom-content">
+                    <p>© 2026 LuxNicker. Tüm hakları saklıdır.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

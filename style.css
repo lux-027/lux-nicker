@@ -199,6 +199,24 @@ body::before {
     opacity: 0.7;
 }
 
+/* Ensure emoji characters render correctly for icon elements */
+.ln-tab-icon,
+.ln-explore-icon,
+.ln-service-icon,
+.ln-input-icon,
+.ln-service-card .ln-service-icon {
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "Noto Sans", "Arial Unicode MS", sans-serif;
+}
+
+/* Large emoji lists / demo area */
+.emoji-grid {
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "Noto Sans", "Arial Unicode MS", sans-serif;
+    font-size: 28px;
+    line-height: 1.4;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
 .ln-tab-text {
     font-size: 11px;
     font-weight: 600;
@@ -1063,10 +1081,11 @@ body:not(.ln-info-page) .ln-tab-btn.ln-active[data-tab="home"] .ln-tab-text {
 }
 
 .ln-category {
-    background: #f8f9fa;
+    background: #ffffff;
     border-radius: 12px;
     padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: none;
 }
 
 .ln-category-title {
@@ -1094,17 +1113,17 @@ body:not(.ln-info-page) .ln-tab-btn.ln-active[data-tab="home"] .ln-tab-text {
     display: flex;
     flex-direction: column;
     background: #fff;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12), 0 5px 15px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
     position: relative;
     isolation: isolate;
-    animation: fadeInUp 0.4s ease forwards;
+    animation: none;
 }
 
 .ln-card:hover {
     transform: translateY(-1px);
-    box-shadow: 0 10px 20px rgba(168, 85, 247, 0.15);
-    filter: brightness(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    filter: none;
 }
 
 .ln-card-header {
@@ -1219,12 +1238,14 @@ body:not(.ln-info-page) .ln-tab-btn.ln-active[data-tab="home"] .ln-tab-text {
     justify-content: center;
     font-size: 24px;
     padding: 10px;
-    background: #ffffff;
-    border: none;
+    background: #f9f9f9;
+    border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 12px;
     cursor: pointer;
     contain: layout style;
     isolation: isolate;
+    box-shadow: none;
+    transition: background-color 0.15s ease, transform 0.15s ease;
 }
 
 .ln-emoji-card {
@@ -1234,8 +1255,9 @@ body:not(.ln-info-page) .ln-tab-btn.ln-active[data-tab="home"] .ln-tab-text {
 }
 
 .ln-symbol-card:hover, .ln-emoji-card:hover {
-    transform: translateY(-8px) scale(1.05);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15), 0 10px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    background: #ffffff;
 }
 
 /* ===== TOAST ===== */

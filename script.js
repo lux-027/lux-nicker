@@ -26,6 +26,21 @@ if (typeof window !== 'undefined') {
     window.handleBlogReadMore = handleBlogReadMore;
 }
 
+// Replace unsupported/unknown emoji glyphs with Twemoji SVGs for consistent rendering
+function parseTwemojiElement(element) {
+    if (window.twemoji && element) {
+        try {
+            twemoji.parse(element, { folder: 'svg', ext: '.svg' });
+        } catch (e) {
+            console.warn('Twemoji parse failed:', e);
+        }
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    parseTwemojiElement(document.body);
+});
+
 // ===== GLOBAL VARIABLES =====
 let currentTab = 'styles';
 let nameInputValue = '';
@@ -1311,7 +1326,8 @@ function renderSymbols() {
         if (categoryIndex >= categories.length) return;
         
         const [categoryName, symbols] = categories[categoryIndex];
-        const categorySection = createSymbolCategoryOptimized(categoryName, symbols);
+        const cleanSymbols = getSanitizedSymbols(symbols);
+        const categorySection = createSymbolCategoryOptimized(categoryName, cleanSymbols);
         container.appendChild(categorySection);
         
         categoryIndex++;
@@ -1349,6 +1365,7 @@ function createSymbolCategoryOptimized(categoryName, symbols) {
             itemsGrid.appendChild(card);
         }
         
+        parseTwemojiElement(itemsGrid);
         symbolIndex = endIndex;
         
         // Bir sonraki chunk'u 50ms sonra yükle
@@ -1403,6 +1420,18 @@ function getSanitizedEmojis(emojis) {
     });
 }
 
+function getSanitizedSymbols(symbols) {
+    const seen = new Set();
+    return symbols.filter(symbol => {
+        if (!symbol || typeof symbol !== 'string') return false;
+        if (symbol.includes('\uFFFD')) return false;
+        if (!symbol.trim()) return false;
+        if (seen.has(symbol)) return false;
+        seen.add(symbol);
+        return true;
+    });
+}
+
 function renderEmojis() {
     const container = document.getElementById('emojisContainer');
     container.innerHTML = '';
@@ -1429,6 +1458,7 @@ function createEmojiCategory(categoryName, emojis) {
         itemsGrid.appendChild(card);
     });
 
+    parseTwemojiElement(itemsGrid);
     section.appendChild(title);
     section.appendChild(itemsGrid);
 

@@ -869,13 +869,9 @@ const emojiDatabase = {
         '👺', '👻', '👽', '👾', '🤖'
     ],
     'Kalpler': [
-        '❤️', '🧡', '💛', '💚', '💙', '💜', '🖤', '🤍', '🤎', '💔', '❣️', '💕',
-        '💞', '💓', '💗', '💖', '💘', '💝', '💟', '❤️‍🔥', '❤️‍🩹', '🫀', '🫶',
-        '💏', '💑', '💋', '💌', '😘', '🥰', '😍', '�', '♥', '♡', '❣', '❤',
-        '💙💚', '💚💛', '💛💜', '💜🖤', '🖤��', '🤍🤎', '💔❣️', '❣️💕',
-        '💞💓', '💗💖', '💘💝', '💟❤️', '❤️‍🔥', '❤️‍🩹', '🫀🫶', '🥰�',
-        '🤩😘', '���', '💓💗', '💖💘', '💝💟', '♥♡', '❣❤', '💙💚', '�💜',
-        '🖤🤍', '🤎💔', '❣️💕', '💞💓', '💗💖', '💘💝', '�❤️', '�🩹', '🫀🫶'
+        '❤️', '🧡', '💛', '💚', '💙', '💜', '🖤', '🤍', '🤎', '🩷', '🩵', '🩶',
+        '💔', '❣️', '💕', '💞', '💓', '💗', '💖', '💘', '💝', '💟',
+        '❤️‍🔥', '❤️‍🩹', '🫀', '🫶', '💋', '💌', '💏', '💑', '😍', '🥰', '😘'
     ],
     'İnsanlar': [
         '👋', '🤚', '🖐', '✋', '🖖', '👌', '🤌', '🤏', '✌️', '🤞', '🤟', '🤘',
@@ -914,7 +910,7 @@ const emojiDatabase = {
         '🦋', '🐌', '🐞', '🐜', '🦟', '🦗', '🕷', '🕸', '🦂', '🐢', '🐍', '🦎',
         '🦖', '🦕', '🦙', '🦒', '🐘', '🦏', '🦛', '🐪', '🐫', '🦣', '🦘', '🦡',
         '🐃', '🐂', '🐄', '🐎', '🐖', '🐏', '🐑', '🦌', '🐇', '🐀', '🐁', '🐿',
-        '🦔', '🐾', '🐉', '🐲', '🦚', '🦜', '🦢', '🦩', '🦃', '🦔', '🐿', '🦔'
+        '🦔', '🐾', '🐉', '🐲', '🦚', '🦜', '🦢', '🦩', '🦃', '🐿'
     ],
     'Nesneler': [
         '⌚', '📱', '📲', '💻', '⌨️', '🖥', '🖨', '🖱', '🖲', '🕹', '🗜', '💽',
@@ -1381,12 +1377,38 @@ function createSymbolCardOptimized(symbol) {
 }
 
 // ===== RENDER EMOJIS =====
+/** Bozuk/yanlış emoji girdilerini filtrele (encoding hatası, yapıştırılmış çoklu emoji vb.) */
+function isRenderableEmoji(emoji) {
+    if (!emoji || typeof emoji !== 'string') return false;
+    if (emoji.includes('\uFFFD')) return false;
+
+    const graphemes = [...emoji];
+    // ZWJ birleşimi değilse birden fazla bağımsız emoji yapıştırılmışsa atla
+    if (graphemes.length > 4 && !emoji.includes('\u200D')) return false;
+
+    const emojiBase = /[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}\u{FE00}-\u{FE0F}\u{1F1E6}-\u{1F1FF}]/u;
+    const bases = emoji.match(new RegExp(emojiBase.source, 'gu'));
+    if (bases && bases.length > 1 && !emoji.includes('\u200D')) return false;
+
+    return true;
+}
+
+function getSanitizedEmojis(emojis) {
+    const seen = new Set();
+    return emojis.filter(emoji => {
+        if (!isRenderableEmoji(emoji)) return false;
+        if (seen.has(emoji)) return false;
+        seen.add(emoji);
+        return true;
+    });
+}
+
 function renderEmojis() {
     const container = document.getElementById('emojisContainer');
     container.innerHTML = '';
 
     Object.entries(emojiDatabase).forEach(([category, emojis]) => {
-        const categorySection = createEmojiCategory(category, emojis);
+        const categorySection = createEmojiCategory(category, getSanitizedEmojis(emojis));
         container.appendChild(categorySection);
     });
 }

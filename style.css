@@ -1229,6 +1229,8 @@ body:not(.ln-info-page) .ln-tab-btn.ln-active[data-tab="home"] .ln-tab-text {
 
 .ln-emoji-card {
     font-size: 28px;
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+    line-height: 1;
 }
 
 .ln-symbol-card:hover, .ln-emoji-card:hover {

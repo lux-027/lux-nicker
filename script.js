@@ -21,6 +21,11 @@ function handleBlogReadMore(event, articleId) {
     }
 }
 
+// index.html içindeki inline onclick kullanımını korumak için (module scope -> global)
+if (typeof window !== 'undefined') {
+    window.handleBlogReadMore = handleBlogReadMore;
+}
+
 // ===== GLOBAL VARIABLES =====
 let currentTab = 'styles';
 let nameInputValue = '';

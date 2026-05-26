@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim - LuxNicker</title>
+    <meta name="description" content="LuxNicker ile iletişime geçin. Önerileriniz, geri bildirimleriniz veya sorularınız için buradayız.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📩</text></svg>">
+</head>
+<body class="light-theme">
+    <div class="ln-container">
+        <header class="ln-header">
+            <div class="ln-header-content">
+                <div class="ln-brand">
+                    <img src="assets/images/luxnickerlogo.png" alt="luxNicker Logo" class="ln-logo">
+                    <h1 class="ln-logo-text">LUX NİCKER</h1>
+                </div>
+                <nav class="ln-nav">
+                    <a href="index.html" class="ln-nav-btn" title="Ana Sayfaya Dön">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="ln-nav-icon">
+                            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                        </svg>
+                        <span>Ana Sayfa</span>
+                    </a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="ln-main">
+            <div class="ln-info-page">
+                <section class="ln-info-hero">
+                    <div class="ln-hero-content">
+                        <h1 class="ln-hero-title animate-fade-in-up">
+                            <span class="ln-hero-icon">📩</span>
+                            İletişim
+                        </h1>
+                        <p class="ln-hero-subtitle animate-fade-in-up animate-delay-1">
+                            Sorularınız, önerileriniz veya iş birliği talepleriniz için buradayız.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="ln-info-content">
+                    <div class="ln-content-grid">
+                        <div class="ln-content-card animate-fade-in-up animate-delay-2">
+                            <div class="ln-card-icon">
+                                <span>📧</span>
+                            </div>
+                            <h3 class="ln-card-title">E-posta</h3>
+                            <p class="ln-card-text">
+                                Bize doğrudan e-posta gönderebilirsiniz. Genellikle 24 saat içinde yanıt veriyoruz.
+                            </p>
+                            <p class="ln-card-text">
+                                <strong>luxtrade.0@gmail.com</strong>
+                            </p>
+                        </div>
+                        <div class="ln-content-card animate-fade-in-up animate-delay-3">
+                            <div class="ln-card-icon">
+                                <span>💬</span>
+                            </div>
+                            <h3 class="ln-card-title">Ne için yazabilirsiniz?</h3>
+                            <p class="ln-card-text">
+                                • Site geliştirme önerileri<br>
+                                • Hata bildirimleri<br>
+                                • AdSense, reklam ve iş birliği talepleri<br>
+                                • İçerik veya gizlilik soruları
+                            </p>
+                        </div>
+                        <div class="ln-content-card animate-fade-in-up animate-delay-4">
+                            <div class="ln-card-icon">
+                                <span>📌</span>
+                            </div>
+                            <h3 class="ln-card-title">Hızlı Cevap</h3>
+                            <p class="ln-card-text">
+                                E-postanıza mümkün olan en kısa sürede dönüş yapılır. Lütfen mesajınızda "LuxNicker" yazdığınızdan emin olun.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="ln-info-contact">
+                    <div class="ln-contact-content animate-fade-in-up animate-delay-5">
+                        <h3 class="ln-contact-title">
+                            <span>🤝</span>
+                            Bizimle iletişime geçin
+                        </h3>
+                        <p class="ln-contact-text">
+                            Site ile ilgili her türlü soru ve talebiniz için e-posta adresimize yazabilirsiniz. Geri bildirimleriniz, LuxNicker'ı daha iyi hale getirir.
+                        </p>
+                        <div class="ln-contact-email">
+                            <strong>E-posta:</strong> <a href="mailto:luxtrade.0@gmail.com" class="ln-email-link">luxtrade.0@gmail.com</a>
+                        </div>
+                        <div class="ln-contact-buttons">
+                            <a href="index.html" class="ln-btn ln-btn-primary">
+                                <span>🏠</span>
+                                <span>Ana Sayfaya Dön</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="ln-footer">
+            <div class="ln-footer-container">
+                <div class="ln-footer-content">
+                    <div class="ln-footer-text">
+                        <p>&copy; 2026 LuxNicker. Tüm hakları saklıdır.</p>
+                    </div>
+                    <div class="ln-footer-links">
+                        <a href="hakkimizda.html" class="ln-footer-link">Hakkımızda</a>
+                        <a href="gizlilik.html" class="ln-footer-link">Gizlilik Politikası</a>
+                        <a href="kullanim-sartlari.html" class="ln-footer-link">Kullanım Şartları</a>
+                        <a href="iletisim.html" class="ln-footer-link ln-active">İletişim</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('.animate-fade-in-up');
+            animatedElements.forEach((element, index) => {
+                setTimeout(() => {
+                    element.classList.add('animate-active');
+                }, index * 100);
+            });
+        });
+    </script>
+</body>
+</html>
